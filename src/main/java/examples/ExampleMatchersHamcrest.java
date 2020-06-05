@@ -1,8 +1,6 @@
 package examples;
 
-
 import org.hamcrest.Matchers;
-import org.hamcrest.collection.IsCollectionWithSize;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,19 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-/**
- * Hello world!
- */
-public class App {
-
-    @Test
-    public void simpleGetRestAssured() {
-        given()
-        .when()
-            .get("http://restapi.wcaquino.me/ola")
-        .then()
-            .statusCode(200);
-    }
+public class ExampleMatchersHamcrest {
 
     @Test
     public void matchersHamcrest(){
@@ -48,5 +34,16 @@ public class App {
 
         List<String> str = new ArrayList<>();
         assertThat(str, empty());
+    }
+
+    @Test
+    public void validateBody(){
+        given()
+        .when()
+            .get("http://restapi.wcaquino.me/ola")
+        .then()
+            .statusCode(200)
+            .body(is(notNullValue()))
+            .body(is("Ola Mundo!"));
     }
 }
