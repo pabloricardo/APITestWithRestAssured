@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
-public class ExampleMatchersHamcrest {
+public class ExampleMatchersHamcrestTest {
 
     @Test
     public void matchersHamcrest(){

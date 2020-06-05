@@ -16,7 +16,7 @@ import static org.hamcrest.Matchers.*;
 /**
  * Hello world!
  */
-public class SimpleGetRestAssured {
+public class SimpleGetRestAssuredTest {
 
     @Test
     public void simpleGetRestAssured() {

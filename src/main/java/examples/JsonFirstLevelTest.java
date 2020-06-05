@@ -11,7 +11,7 @@ import org.junit.Test;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class JsonFirstLevel {
+public class JsonFirstLevelTest {
 
     @Before
     public void printJson(){
