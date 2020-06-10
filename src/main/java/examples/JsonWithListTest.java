@@ -27,6 +27,8 @@ public class JsonWithListTest {
         .then()
             .body("filhos", hasSize(2))
             .body("filhos[0].name", is("Zezinho"))
-            .body("filhos.name", hasItems("Luizinho", "Zezinho"));
+            .body("filhos.name", hasItems("Luizinho", "Zezinho"))
+            .body("filhos.name", contains("Zezinho", "Luizinho"));
+
     }
 }
